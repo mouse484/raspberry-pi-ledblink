@@ -1,6 +1,11 @@
-def main():
-    print("Hello from raspberry-pi-ledblink!")
+from time import sleep
 
+from gpiozero import LED
 
-if __name__ == "__main__":
-    main()
+led = LED(17)
+
+while True:
+    led.on()
+    sleep(1)
+    led.off()
+    sleep(1)
